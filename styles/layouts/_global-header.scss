@@ -1,0 +1,19 @@
+.global-header {
+  width: 100%;
+
+  .gnb,
+  .lnb {
+    position: fixed;
+    left: 0;
+    width: 100%;
+  }
+
+  .gnb {
+    top: 0;
+    height: 80px;
+  }
+
+  .lnb {
+    display: none;
+  }
+}

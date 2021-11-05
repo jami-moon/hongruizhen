@@ -1,0 +1,52 @@
+.gnb {
+  @include flex(between);
+  padding: 0 130px;
+  background-color: $white;
+
+  &__left {
+    @include flex(start);
+  }
+
+  &__right {
+    @include flex(start);
+  }
+
+  &__title {
+    margin-right: 80px;
+
+    a {
+      display: block;
+
+      img {
+        display: block;
+        width: 180px;
+        height: auto;
+      }
+    }
+  }
+
+  .nav {
+    &__list {
+      @include flex;
+    }
+
+    &__item {
+      margin-right: 30px;
+
+      a {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 70px;
+        color: $primary;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+
+  .membership {
+    @include flex;
+
+    li {
+    }
+  }
+}

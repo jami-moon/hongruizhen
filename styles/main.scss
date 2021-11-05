@@ -1,0 +1,17 @@
+@import "./constants/colors";
+@import "./constants/typography";
+
+@import "./base/fonts";
+@import "./base/globals";
+@import "./base/normalize";
+@import "./base/reset";
+
+@import "./mixins/flexbox";
+@import "./mixins/positions";
+
+@import "./layouts/global-header";
+@import "./layouts/gnb";
+
+body {
+  background-color: rgb(244, 165, 96);
+}
