@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>홍루이젠 클론 홈페이지</title>
     <!-- 구글 폰트 -->
+    <!-- Nunito font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
     <!-- 메인 CSS 링크 -->
@@ -43,7 +51,9 @@
           <div class="membership">
             <div class="membership__login"><a href="#">LOGIN</a></div>
             <div class="membership__join"><a href="#">JOIN</a></div>
-            <button class="membership__franchise" type="button"><a href="#">프랜차이즈</a></button>
+            <button class="membership__franchise btn-outlined" type="button">
+              <a href="#">프랜차이즈</a>
+            </button>
           </div>
           <button class="menu-btn" type="button">
             <img src="./assets/images/icon_ham.png" alt="GNB 메뉴" />
@@ -53,25 +63,78 @@
 
       <!-- LNB -->
       <div class="lnb">
-        <ul class="lnb-list">
-          <li class="lnb__brand">
-            <div>
-              <h3>브랜드소개</h3>
-              <ul>
-                <li><a href="#">홍루이젠 소개</a></li>
-                <li><a href="#">브랜드 철학</a></li>
-                <li><a href="#">히스토리</a></li>
+        <div class="lnb__wrapper lnb__wrapper--brand">
+          <div class="lnb__box">
+            <div class="lnb__content">
+              <h3 class="lnb__title">브랜드소개</h3>
+              <ul class="lnb__list">
+                <li class="lnb__item"><a href="#">홍루이젠 소개</a></li>
+                <li class="lnb__item"><a href="#">브랜드 철학</a></li>
+                <li class="lnb__item"><a href="#">히스토리</a></li>
               </ul>
             </div>
-            <div>
+            <div class="lnb__banner">
               <img src="./assets/images/lnb_banner_brand.jpg" alt="브랜드 소개 배너" />
             </div>
-          </li>
-          <li class="lnb__menu"></li>
-          <li class="lnb__store"></li>
-          <li class="lnb__community"></li>
-        </ul>
+          </div>
+        </div>
+        <div class="lnb__wrapper lnb__wrapper--menu">
+          <div class="lnb__box">
+            <div class="lnb__content">
+              <h3 class="lnb__title">메뉴</h3>
+              <ul class="lnb__list">
+                <li class="lnb__item"><a href="#">전체</a></li>
+                <li class="lnb__item"><a href="#">신제품</a></li>
+                <li class="lnb__item"><a href="#">소프트 샌드위치</a></li>
+                <li class="lnb__item"><a href="#">갓군샌</a></li>
+                <li class="lnb__item"><a href="#">프레시 샌드위치</a></li>
+                <li class="lnb__item"><a href="#">디저트</a></li>
+                <li class="lnb__item"><a href="#">음료</a></li>
+              </ul>
+            </div>
+            <div class="lnb__banner">
+              <img src="./assets/images/lnb_banner_menu.jpg" alt="메뉴 배너" />
+            </div>
+          </div>
+        </div>
+        <div class="lnb__wrapper lnb__wrapper--store">
+          <div class="lnb__box">
+            <div class="lnb__content">
+              <h3 class="lnb__title">매장안내</h3>
+              <ul class="lnb__list">
+                <li class="lnb__item"><a href="#">매장 찾기</a></li>
+                <li class="lnb__item"><a href="#">단체주문</a></li>
+              </ul>
+            </div>
+            <div class="lnb__banner">
+              <img src="./assets/images/lnb_banner_store.jpg" alt="매장 안내 배너" />
+            </div>
+          </div>
+        </div>
+        <div class="lnb__wrapper lnb__wrapper--community">
+          <div class="lnb__box">
+            <div class="lnb__content">
+              <h3 class="lnb__title">커뮤니티</h3>
+              <ul class="lnb__list">
+                <li class="lnb__item"><a href="#">홍루이젠 소식</a></li>
+                <li class="lnb__item"><a href="#">프레스센터</a></li>
+                <li class="lnb__item"><a href="#">이벤트</a></li>
+                <li class="lnb__item"><a href="#">고객의 소리</a></li>
+              </ul>
+            </div>
+            <div class="lnb__banner">
+              <img src="./assets/images/lnb_banner_community.jpg" alt="커뮤니티 배너" />
+            </div>
+          </div>
+        </div>
       </div>
     </header>
+
+    <aside>
+      <header>
+        <h2><img src="./assets/images/logo.png" alt="로고" /></h2>
+      </header>
+      <button type="button"></button>
+    </aside>
   </body>
 </html>

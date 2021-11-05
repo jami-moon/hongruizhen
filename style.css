@@ -1,5 +1,11 @@
 @font-face {
   font-family: "S-CoreDream";
+  src: url("/assets/fonts/SCDream3.otf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "S-CoreDream";
   src: url("/assets/fonts/SCDream4.otf");
   font-style: normal;
   font-weight: 400;
@@ -377,6 +383,9 @@ template {
   box-sizing: border-box;
   margin: 0;
   font-family: "Nunito Sans", "S-CoreDream", sans-serif;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -446,35 +455,30 @@ address {
   height: 80px;
 }
 .global-header .lnb {
-  display: none;
+  top: 80px;
 }
 
 .gnb {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 130px;
+  padding: 0 50px;
   background-color: #fff;
 }
-.gnb__left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.gnb__right {
+.gnb__left, .gnb__right {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 .gnb__title {
-  margin-right: 80px;
+  margin-right: 50px;
 }
 .gnb__title a {
   display: block;
 }
 .gnb__title a img {
   display: block;
-  width: 180px;
+  width: 130px;
   height: auto;
 }
 .gnb .nav__list {
@@ -486,9 +490,8 @@ address {
   margin-right: 30px;
 }
 .gnb .nav__item a {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 70px;
   color: #401e20;
   letter-spacing: -0.5px;
 }
@@ -497,6 +500,115 @@ address {
   align-items: center;
   justify-content: center;
 }
+.gnb .membership__login a, .gnb .membership__join a {
+  font-family: "Montserrat", "S-CoreDream", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #401e20;
+}
+.gnb .membership__login {
+  position: relative;
+}
+.gnb .membership__login::after {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #401e20;
+  content: "|";
+}
+.gnb .membership__join {
+  margin-right: 20px;
+}
+.gnb .membership__franchise {
+  margin-right: 20px;
+}
+.gnb .membership__franchise a {
+  display: block;
+  width: 200px;
+  height: 45px;
+  font-family: "Montserrat", "S-CoreDream", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 45px;
+  color: #f52334;
+}
+
+.lnb__wrapper {
+  display: none;
+  border-top: 1px solid #e4e4e4;
+}
+.lnb__wrapper.is-open {
+  display: block;
+}
+.lnb__box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 300px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.lnb__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: 100%;
+  padding: 30px 0 0 30px;
+}
+.lnb__title {
+  position: relative;
+  margin-right: 100px;
+  font-size: 25px;
+  color: #000;
+}
+.lnb__title::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -75px;
+  display: block;
+  width: 50px;
+  height: 2px;
+  content: "";
+  background-color: #e4e4e4;
+}
+.lnb__list {
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+.lnb__list::-webkit-scrollbar {
+  display: none;
+}
+.lnb__list .lnb__item {
+  margin-bottom: 10px;
+}
+.lnb__list .lnb__item a {
+  font-size: 22px;
+  font-weight: 300;
+  color: #333333;
+  transition: color 300ms ease-in-out, font-weight 300ms ease-in-out;
+}
+.lnb__list .lnb__item a:hover {
+  font-weight: 700;
+  color: #f52334;
+}
+.lnb__banner {
+  height: 100%;
+}
+.lnb__banner img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.btn-outlined {
+  height: 48px;
+  border: 3px solid #f52334;
+  border-radius: 24px;
+}
+
 body {
   background-color: #f4a560;
 }

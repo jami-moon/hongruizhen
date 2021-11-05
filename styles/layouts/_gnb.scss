@@ -1,25 +1,22 @@
 .gnb {
   @include flex(between);
-  padding: 0 130px;
+  padding: 0 50px;
   background-color: $white;
 
-  &__left {
-    @include flex(start);
-  }
-
+  &__left,
   &__right {
     @include flex(start);
   }
 
   &__title {
-    margin-right: 80px;
+    margin-right: 50px;
 
     a {
       display: block;
 
       img {
         display: block;
-        width: 180px;
+        width: 130px;
         height: auto;
       }
     }
@@ -34,9 +31,8 @@
       margin-right: 30px;
 
       a {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 500;
-        line-height: 70px;
         color: $primary;
         letter-spacing: -0.5px;
       }
@@ -46,7 +42,45 @@
   .membership {
     @include flex;
 
-    li {
+    &__login,
+    &__join {
+      a {
+        font-family: $font-montserrat;
+        font-size: 15px;
+        font-weight: 700;
+        color: $primary;
+      }
+    }
+
+    &__login {
+      position: relative;
+    }
+
+    &__login::after {
+      margin: 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      color: $primary;
+      content: "|";
+    }
+
+    &__join {
+      margin-right: 20px;
+    }
+
+    &__franchise {
+      margin-right: 20px;
+
+      a {
+        display: block;
+        width: 200px;
+        height: 45px;
+        font-family: $font-montserrat;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 45px;
+        color: $red;
+      }
     }
   }
 }

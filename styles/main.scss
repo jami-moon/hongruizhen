@@ -1,5 +1,6 @@
 @import "./constants/colors";
 @import "./constants/typography";
+@import "./constants/dimensions";
 
 @import "./base/fonts";
 @import "./base/globals";
@@ -11,6 +12,9 @@
 
 @import "./layouts/global-header";
 @import "./layouts/gnb";
+@import "./layouts/lnb";
+
+@import "./modules/btn";
 
 body {
   background-color: rgb(244, 165, 96);
