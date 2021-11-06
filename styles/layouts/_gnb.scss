@@ -37,11 +37,11 @@
     }
   }
 
-  .membership {
+  &__membership {
     @include flex;
 
-    &__login,
-    &__join {
+    .gnb__login,
+    .gnb__join {
       a {
         font-family: $font-montserrat;
         font-size: 16px;
@@ -50,23 +50,23 @@
       }
     }
 
-    &__login {
+    .gnb__login {
       position: relative;
+
+      &::after {
+        margin: 0 10px;
+        font-size: 20px;
+        font-weight: 700;
+        color: $primary;
+        content: "|";
+      }
     }
 
-    &__login::after {
-      margin: 0 10px;
-      font-size: 20px;
-      font-weight: 700;
-      color: $primary;
-      content: "|";
-    }
-
-    &__join {
+    .gnb__join {
       margin-right: 30px;
     }
 
-    &__franchise {
+    .gnb__franchise {
       margin-right: 30px;
     }
   }
