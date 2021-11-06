@@ -22,6 +22,8 @@
     />
     <!-- 메인 CSS 링크 -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- 메인 JS 링크 -->
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
     <!-- 글로벌헤더 -->
@@ -130,35 +132,39 @@
         </div>
       </div>
     </header>
+
     <main></main>
+
     <footer></footer>
 
     <aside class="aside-menu">
       <header class="aside-menu__header">
         <h2 class="visually-hidden">사이드 메뉴</h2>
-        <div><img src="./assets/images/logo.png" alt="로고" /></div>
+        <div class="aside-menu__logo">
+          <a href="#"><img src="./assets/images/logo.png" alt="로고" /></a>
+        </div>
       </header>
 
-      <ul class="menu-list">
-        <li class="menu-list__item">
+      <ul class="aside-menu__list">
+        <li class="aside-menu__item">
           <strong>브랜드소개</strong>
-          <ul>
+          <ul class="aside-menu__content notepad">
             <li><a href="#">홍루이젠 소개</a></li>
             <li><a href="#">브랜드 철학</a></li>
             <li><a href="#">히스토리</a></li>
           </ul>
         </li>
-        <li class="menu-content__list">
+        <li class="aside-menu__item">
           <strong>브랜드관</strong>
-          <ul>
+          <ul class="aside-menu__content notepad">
             <li>
               <a href="#">브랜드관</a>
             </li>
           </ul>
         </li>
-        <li>
+        <li class="aside-menu__item">
           <strong>메뉴</strong>
-          <ul>
+          <ul class="aside-menu__content notepad">
             <li><a href="#">전체</a></li>
             <li><a href="#">신제품</a></li>
             <li><a href="#">소프트 샌드위치</a></li>
@@ -168,31 +174,33 @@
             <li><a href="#">음료</a></li>
           </ul>
         </li>
-        <li>
+        <li class="aside-menu__item">
           <strong>매장안내</strong>
-          <ul>
+          <ul class="aside-menu__content notepad">
             <li><a href="#">매장찾기</a></li>
             <li><a href="#">단체주문</a></li>
           </ul>
         </li>
-        <li>
+        <li class="aside-menu__item">
           <strong>커뮤니티</strong>
-          <ul>
+          <ul class="aside-menu__content notepad">
             <li><a href="#">홍루이젠 소식</a></li>
             <li><a href="#">프레스센터</a></li>
             <li><a href="#">이벤트</a></li>
             <li><a href="#">고객의 소리</a></li>
           </ul>
         </li>
-        <li>
+        <li class="aside-menu__item">
           <strong>쇼핑하기</strong>
-          <ul>
+          <ul class="aside-menu__content notepad">
             <li><a href="#">쇼핑하기</a></li>
           </ul>
         </li>
       </ul>
 
-      <button type="button"><img src="./assets/images/icon-close.png" alt="닫기 이미지" /></button>
+      <button class="aside-menu__close" type="button">
+        <img src="./assets/images/icon-close.png" alt="닫기 이미지" />
+      </button>
     </aside>
   </body>
 </html>

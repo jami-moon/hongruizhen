@@ -12,10 +12,12 @@
 @import "./mixins/positions";
 
 @import "./modules/buttons";
+@import "./modules/style-notepad";
 
 @import "./layouts/global-header";
 @import "./layouts/gnb";
 @import "./layouts/lnb";
+@import "./layouts/aside-menu";
 
 body {
   background-color: rgb(244, 165, 96);
