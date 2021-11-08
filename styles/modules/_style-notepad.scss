@@ -13,13 +13,13 @@
     width: 100%;
     height: 0;
     content: "";
-    background-color: $background-pink;
+    background-color: $pink;
     border: 2px solid $tertiary;
     opacity: 0;
     transition: opacity 0.5s ease, height 0.5s ease;
   }
 
   &:hover {
-    background-color: $background-yellow;
+    background-color: $yellow;
   }
 }
