@@ -4,6 +4,7 @@
   &__left,
   &__right {
     @include flex;
+    height: 100%;
   }
 
   &__title {
@@ -33,6 +34,11 @@
         font-weight: 500;
         color: $primary;
         letter-spacing: -0.5px;
+        transition: color 0.5s ease-in-out;
+
+        &:hover {
+          color: $red;
+        }
       }
     }
   }
