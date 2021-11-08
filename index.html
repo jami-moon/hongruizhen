@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="./style.css" />
     <!-- fullPage.css 링크 -->
     <link rel="stylesheet" href="./jquery.fullPage.css" />
+    <!-- tiny slider CSS 링크 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
     <!-- jquery 링크 -->
     <script src="./js/jquery-3.6.0.min.js" defer></script>
     <!-- fullPage.js 링크 -->
@@ -37,6 +42,7 @@
     <script src="./js/full-page.js" defer></script>
     <script src="./js/global-header.js" defer></script>
     <script src="./js/aside-menu.js" defer></script>
+    <script src="./js/carousel.js" defer></script>
   </head>
   <body>
     <!-- 글로벌헤더 -->
@@ -68,7 +74,7 @@
                 <a href="#">프랜차이즈</a>
               </button>
             </div>
-            <button class="gnb__menu-btn" type="button">
+            <button class="gnb__menu-btn" type="button" aria-label="메뉴 버튼">
               <img src="./assets/images/icon_ham.png" alt="GNB 메뉴" />
             </button>
           </div>
@@ -147,15 +153,196 @@
     </header>
 
     <main>
-      <div class="fullpage-container">
-        <section class="section main-banner">
+      <div id="fullpage">
+        <section class="section banner">
           <h2 class="visually-hidden">메인배너</h2>
-          <ul class="main-banner__list">
-            <li class="main-banner__item"></li>
-            <li class="main-banner__item"></li>
-            <li class="main-banner__item"></li>
+          <ul class="banner__list">
+            <li class="banner__item banner__item--0" role="tabpanel" aria-labelledby="banner-tab-0">
+              <div class="banner-content">
+                <div class="banner-content__info">
+                  <h3>뽀또샌드위치</h3>
+                  <p>
+                    역대급 콜라보 출시<br />
+                    #뽀또샌드위치 #홍루이젠 #홍루이젠X크라운 #뽀또 #뽀또치즈
+                  </p>
+                </div>
+
+                <div class="banner-content__image">
+                  <img src="./assets/images/bboddo-main.png" alt="뽀또 메인 이미지" />
+                </div>
+
+                <div class="banner-spread">
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/bboddo-cheese_1.png"
+                    alt="뽀또 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/bboddo-cheese_2.png"
+                    alt="뽀또 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/bboddo-product_1.png"
+                    alt="뽀또 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/bboddo-product_2.png"
+                    alt="뽀또 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/bboddo-product_3.png"
+                    alt="뽀또 스프레드 이미지"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="banner__item banner__item--1" role="tabpanel" aria-labelledby="banner-tab-1">
+              <div class="banner-content">
+                <div class="banner-content__info">
+                  <h3>홍루이젠<br />리얼펑리수 출시</h3>
+                  <p>대만 현지 레시피를 완벽하게 구현한 프리미엄 파인애플 펑리수</p>
+                </div>
+
+                <div class="banner-content__image">
+                  <img src="./assets/images/peng-main.png" alt="펑리수 메인 이미지" />
+                </div>
+
+                <div class="banner-spread">
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/peng_1.png"
+                    alt="펑리수 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/peng_2.png"
+                    alt="펑리수 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/peng_3.png"
+                    alt="펑리수 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/peng_4.png"
+                    alt="펑리수 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/peng_5.png"
+                    alt="펑리수 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/peng_6.png"
+                    alt="펑리수 스프레드 이미지"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="banner__item banner__item--2" role="tabpanel" aria-labelledby="banner-tab-2">
+              <div class="banner-content">
+                <div class="banner-content__info">
+                  <h3>샌드위치 베이커리<br /><span>홍루이젠</span></h3>
+                  <p>
+                    바르고 건강한 샌드위치를 향한 홍루이젠의 약속,<br />
+                    누구나 안심하고 먹을 수 있는 좋은 재료로 만듭니다.
+                  </p>
+                </div>
+                <div class="banner-content__image">
+                  <img src="./assets/images/sandwich-main.png" alt="샌드위치 메인 이미지" />
+                </div>
+
+                <div class="banner-spread">
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_1.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_2.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_3.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_4.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_5.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_6.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                  <img
+                    class="banner-spread__image"
+                    src="./assets/images/sandwich_7.png"
+                    alt="샌드위치 스프레드 이미지"
+                  />
+                </div>
+              </div>
+            </li>
           </ul>
+
+          <div class="banner-nav">
+            <ul class="banner-nav__list" role="tablist">
+              <li class="banner-nav__item banner-nav__item--0" id="banner-tab-0" role="tab">
+                <button type="button">
+                  <span aria-label="navigation number 1">01</span>
+                  <img src="/assets/images/banner-nav_sandwich.png" alt="배너 네비게이션 이미지" />
+                  뽀또 샌드위치
+                </button>
+              </li>
+
+              <li class="banner-nav__item banner-nav__item--1" id="banner-tab-1" role="tab">
+                <button type="button">
+                  <span aria-label="navigation number 2">02</span>
+                  <img src="/assets/images/banner-nav_new.png" alt="배너 네비게이션 이미지" />
+                  리얼펑리수
+                </button>
+              </li>
+
+              <li class="banner-nav__item banner-nav__item--2" id="banner-tab-2" role="tab">
+                <button type="button">
+                  <span aria-label="navigation number 3">03</span>
+                  <img src="/assets/images/banner-nav_bread.png" alt="배너 네비게이션 이미지" />
+                  샌드위치 베이커리
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="arrow" aria-hidden="true">
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="arrow" aria-hidden="true">
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </section>
+
         <section class="section">section2</section>
         <section class="section">section3</section>
         <section class="section">section4</section>

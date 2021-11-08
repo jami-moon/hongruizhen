@@ -1,0 +1,53 @@
+.banner-nav {
+  position: absolute;
+  top: 35%;
+  right: 13.5%;
+
+  &__item {
+    position: relative;
+    margin-bottom: 30px;
+
+    &.tns-nav-active {
+      button {
+        font-weight: 700;
+        color: $primary;
+        opacity: 1;
+
+        img {
+          background-color: $yellow-vivid;
+          border-color: $brown;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    button {
+      @include flex;
+      font-size: 17px;
+      color: $primary;
+      opacity: 0.5;
+      transition: opacity 0.3s ease-in-out;
+
+      img {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 20px;
+        background-color: $brown-superlight;
+        border: 2px solid $brown-light;
+        border-radius: 50%;
+      }
+    }
+
+    &--1 {
+      left: 11px;
+    }
+
+    &--2 {
+      left: 12px;
+    }
+  }
+}

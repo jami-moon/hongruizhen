@@ -13,8 +13,13 @@
 
 @import "./modules/buttons";
 @import "./modules/style-notepad";
+@import "./modules/arrow";
 
+@import "./layouts/full-page";
 @import "./layouts/global-header";
 @import "./layouts/gnb";
 @import "./layouts/lnb";
 @import "./layouts/aside-menu";
+@import "./layouts/banner";
+
+@import "./components/banner-nav";
