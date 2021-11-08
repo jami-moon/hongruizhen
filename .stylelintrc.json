@@ -520,6 +520,7 @@
     "scss/percent-placeholder-pattern": "^.[a-z]+(-[a-z0-9])*",
     "scss/operator-no-newline-after": null,
     "declaration-block-trailing-semicolon": ["always", { "ignore": ["single-declaration"] }],
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "function-url-quotes": null
   }
 }
