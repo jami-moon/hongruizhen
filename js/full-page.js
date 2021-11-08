@@ -1,5 +1,3 @@
-$(document).ready(function () {
-  $(".fullpage-container").fullpage({
-    autoScrolling: true,
-  });
+$("#fullpage").fullpage({
+  autoScrolling: true,
 });
