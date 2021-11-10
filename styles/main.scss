@@ -18,9 +18,10 @@
 
 @import "./layouts/full-page";
 @import "./layouts/global-header";
-@import "./layouts/gnb";
-@import "./layouts/lnb";
 @import "./layouts/aside-menu";
 @import "./layouts/banner";
 
 @import "./components/banner-nav";
+@import "./components/gnb";
+@import "./components/lnb";
+@import "./components/banner-spread";

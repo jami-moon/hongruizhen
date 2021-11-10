@@ -1,0 +1,157 @@
+.banner-spread {
+  &__image {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s 0.2s ease, opacity 0.5s 0.3s ease;
+
+    &:nth-child(2n - 1) {
+      top: 50%;
+      left: -100%;
+      animation: rotate-spread 3s infinite;
+    }
+
+    &:nth-child(2n) {
+      top: 50%;
+      right: -100%;
+      animation: rotate-spread2 3s infinite;
+    }
+  }
+
+  @keyframes rotate-spread {
+    0% {
+      transform: rotate(0);
+    }
+
+    50% {
+      transform: rotate(10deg);
+    }
+
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes rotate-spread2 {
+    0% {
+      transform: rotate(0);
+    }
+
+    50% {
+      transform: rotate(-10deg);
+    }
+
+    100% {
+      transform: rotate(0);
+    }
+  }
+}
+
+.banner__item {
+  &--0.tns-slide-active .banner-spread {
+    &__image {
+      opacity: 1;
+
+      &:nth-child(1) {
+        top: 2%;
+        left: 60%;
+      }
+
+      &:nth-child(2) {
+        top: 70%;
+        right: 70%;
+      }
+
+      &:nth-child(3) {
+        top: 5%;
+        left: 30%;
+      }
+
+      &:nth-child(4) {
+        top: 65%;
+        right: 21%;
+      }
+
+      &:nth-child(5) {
+        top: 60%;
+        left: 75%;
+      }
+    }
+  }
+
+  &--1.tns-slide-active .banner-spread {
+    &__image {
+      opacity: 1;
+
+      &:nth-child(1) {
+        top: 7%;
+        left: 60%;
+      }
+
+      &:nth-child(2) {
+        top: 13%;
+        right: 60%;
+      }
+
+      &:nth-child(3) {
+        top: 70%;
+        left: 70%;
+      }
+
+      &:nth-child(4) {
+        top: 83%;
+        right: 50%;
+      }
+
+      &:nth-child(5) {
+        top: 75%;
+        left: 10%;
+      }
+
+      &:nth-child(6) {
+        top: 65%;
+        right: 70%;
+      }
+    }
+  }
+
+  &--2.tns-slide-active .banner-spread {
+    &__image {
+      opacity: 1;
+
+      &:nth-child(1) {
+        top: 7%;
+        left: 60%;
+      }
+
+      &:nth-child(2) {
+        top: 8%;
+        right: 65%;
+      }
+
+      &:nth-child(3) {
+        top: 65%;
+        left: 70%;
+      }
+
+      &:nth-child(4) {
+        top: 83%;
+        right: 50%;
+      }
+
+      &:nth-child(5) {
+        top: 75%;
+        left: 10%;
+      }
+
+      &:nth-child(6) {
+        top: 65%;
+        right: 70%;
+      }
+
+      &:nth-child(7) {
+        top: 20%;
+        left: 70%;
+      }
+    }
+  }
+}
