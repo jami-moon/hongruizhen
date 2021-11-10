@@ -50,4 +50,8 @@
       left: 12px;
     }
   }
+
+  @include responsive(eel) {
+    right: 8%;
+  }
 }

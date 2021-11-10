@@ -19,6 +19,7 @@
 
     &__wrapper {
       @include flex(between);
+      flex-grow: 0;
       height: $gnb-height;
     }
   }
@@ -26,5 +27,11 @@
   .lnb {
     top: $gnb-height;
     z-index: $lnb-level;
+  }
+
+  @include responsive(eel) {
+    .gnb__wrapper {
+      padding: 0 30px;
+    }
   }
 }

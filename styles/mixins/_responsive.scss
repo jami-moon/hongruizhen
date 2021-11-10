@@ -1,0 +1,25 @@
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$el-breakpoint: 1200px;
+$eel-breakpoint: 1660px;
+
+@mixin responsive($screen) {
+  @if ($screen == "eel") {
+    @media screen and (max-width: $eel-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen == "el") {
+    @media screen and (max-width: $el-breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-only() {
+  @media screen and (max-width: ($md-breakpoint - 1)) {
+    @content;
+  }
+}

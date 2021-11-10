@@ -12,10 +12,10 @@
 
     a {
       display: block;
+      width: 180px;
 
       img {
-        display: block;
-        width: 180px;
+        width: 100%;
         height: auto;
       }
     }
@@ -73,7 +73,20 @@
     }
 
     .gnb__franchise {
+      padding: 0 75px;
       margin-right: 30px;
+    }
+  }
+
+  @include responsive(eel) {
+    &__membership .gnb__franchise {
+      padding: 0 30px;
+    }
+  }
+
+  @include responsive(el) {
+    .nav {
+      display: none;
     }
   }
 }
