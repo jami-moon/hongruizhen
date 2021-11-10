@@ -146,8 +146,8 @@
           }
 
           &:nth-child(2) {
-            top: 13%;
-            right: 60%;
+            top: 8%;
+            right: 65%;
           }
 
           &:nth-child(3) {
@@ -187,6 +187,7 @@
         position: absolute;
         top: 30%;
         left: 6%;
+        z-index: 10;
         text-align: right;
 
         h3 {
@@ -207,6 +208,18 @@
 
       &__image {
         @include pos-center;
+        width: 30%;
+        height: 0;
+        padding-top: 30%;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
 
@@ -240,6 +253,28 @@
 
       span::before {
         animation-delay: 0.7s;
+      }
+    }
+  }
+
+  @include responsive(eel) {
+    .banner__item::before {
+      left: -18%;
+    }
+
+    .banner-content {
+      &__info {
+        max-width: 350px;
+        text-align: left;
+
+        h3 {
+          font-size: 45px;
+        }
+      }
+
+      &__image {
+        width: 40%;
+        padding-top: 40%;
       }
     }
   }
