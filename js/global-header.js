@@ -1,19 +1,26 @@
 const $navItem = document.querySelectorAll(".nav__item");
 const $lnbBox = document.querySelector(".lnb");
 const $lnbItem = document.querySelectorAll(".lnb__wrapper");
+const $globalHeader = document.querySelector(".global-header");
 
+// 네비게이션 리스트에 마우스 오버 이벤트 추가
 $navItem.forEach(function (el, idx) {
   el.addEventListener("mouseenter", (e) => {
     handleMouseEnter(e, idx);
   });
 });
 
-$lnbItem.forEach(function (el, idx) {
-  el.addEventListener("mouseleave", (e) => {
-    handleMouseLeave(e, idx);
-  });
+// 마우스가 글로벌 헤더 영역을 벗어나면 열린 lnb 닫기
+$globalHeader.addEventListener("mouseleave", (e) => {
+  slideUp($lnbBox);
+  setTimeout(() => {
+    $lnbItem.forEach((el) => {
+      el.classList.remove(`is-open`);
+    });
+  }, 500);
 });
 
+// GNB 네비게이션 마우스 오버 이벤트핸들러
 function handleMouseEnter(e, idx) {
   let lnbTarget = $lnbItem[idx];
 
@@ -27,14 +34,6 @@ function handleMouseEnter(e, idx) {
       $lnbItem.forEach((el) => el.classList.remove(`is-open`));
     }, 500);
   }
-}
-
-function handleMouseLeave(e, idx) {
-  let lnbTarget = $lnbItem[idx];
-  slideUp($lnbBox);
-  window.setTimeout(() => {
-    lnbTarget.classList.remove(`is-open`);
-  }, 500);
 }
 
 function slideDown(target, duration = 500) {
@@ -66,6 +65,7 @@ function slideDown(target, duration = 500) {
   }, duration);
 }
 
+// 슬라이드 업 - 바닐라 자바스크립트
 function slideUp(target, duration = 500) {
   target.style.transitionProperty = "height, margin, padding";
   target.style.transitionDuration = duration + "ms";
