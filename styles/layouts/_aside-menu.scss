@@ -20,6 +20,10 @@
       height: 55vh;
       overflow: visible;
       opacity: 1;
+
+      &:hover {
+        background-color: $yellow;
+      }
     }
 
     .notepad::after {
