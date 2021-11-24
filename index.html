@@ -40,9 +40,10 @@
     ></script>
     <!-- JS 링크 -->
     <script src="./js/full-page.js" defer></script>
+    <script src="./js/carousel.js" defer></script>
     <script src="./js/global-header.js" defer></script>
     <script src="./js/aside-menu.js" defer></script>
-    <script src="./js/carousel.js" defer></script>
+    <script src="./js/product.js" defer></script>
   </head>
   <body>
     <!-- 글로벌헤더 -->
@@ -148,7 +149,7 @@
             </div>
           </div>
         </div>
-        <div class="lnb__wrapper lnb__wrapper--"></div>
+        <div class="lnb__wrapper lnb__wrapper--shopping"></div>
       </div>
     </header>
 
@@ -343,9 +344,547 @@
           </div>
         </section>
 
-        <section class="section">section2</section>
+        <section class="section product">
+          <div class="product__wrapper">
+            <h2 class="product__title">PRODUCT</h2>
+
+            <div class="product-slide">
+              <div class="product-slide__nav">
+                <ul class="product-slide__nav-list">
+                  <li class="product-slide__nav-item is-active">
+                    <button type="button">NEW</button>
+                  </li>
+                  <li class="product-slide__nav-item"><button type="button">SANDWICH</button></li>
+                  <li class="product-slide__nav-item">
+                    <button type="button">DESSERT</button>
+                  </li>
+                  <li class="product-slide__nav-item"><button type="button">DRINK</button></li>
+                </ul>
+              </div>
+
+              <div class="product-slide__controls">
+                <div class="product-slide__controls--prev">
+                  <div class="arrow" aria-hidden="true">
+                    <div>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="arrow" aria-hidden="true">
+                    <div>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-slide__controls--next">
+                  <div class="arrow" aria-hidden="true">
+                    <div>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="arrow" aria-hidden="true">
+                    <div>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-slide__box">
+                <ul class="product-slide__list product-slide__list--new">
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-peng.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">리얼펑리수</a>
+                        </strong>
+                        <span class="product-card__desc">
+                          <a href="#"
+                            >대만 현지 레시피를 완벽하게 구현한 프리미엄<br />파인애플 펑리수</a
+                          >
+                        </span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-bboddo.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">뽀또 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#"
+                            >크라운 뽀또와 홍루이젠이 공동 개발한 뽀또맛<br />
+                            황치즈크림 샌드위치 펑리수</a
+                          >
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-peanut.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">땅콩크림 듬뿍 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">단짠단짠 땅콩 버터크림이 듬뿍</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-strawberry.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">딸기크림 듬뿍 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">달콤한 딸기 버터크림이 듬뿍</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cheese.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">호밀빵 치즈 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">더 건강해진 호밀빵 치즈 샌드위치</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-ham.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">호밀빵 햄 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">더 건강해진 호밀빵 햄 샌드위치</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/porduct-hamcheese.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">호밀빵 햄치즈 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">더 건강해진 호밀빵 햄치즈 샌드위치</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cropple-cheese.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">체다치즈 크로플</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">단짠단짠 체다치즈와 즐기는 크로플</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+
+                <ul class="product-slide__list product-slide__list--sandwich">
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-bboddo.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">뽀또 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#"
+                            >크라운 뽀또와 홍루이젠이 공동 개발한 뽀또맛<br />
+                            황치즈크림 샌드위치 펑리수</a
+                          >
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-peanut.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">땅콩크림 듬뿍 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">단짠단짠 땅콩 버터크림이 듬뿍</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-strawberry.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">딸기크림 듬뿍 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">달콤한 딸기 버터크림이 듬뿍</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cheese.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">호밀빵 치즈 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">더 건강해진 호밀빵 치즈 샌드위치</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-ham.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">호밀빵 햄 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">더 건강해진 호밀빵 햄 샌드위치</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/porduct-hamcheese.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">호밀빵 햄치즈 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">더 건강해진 호밀빵 햄치즈 샌드위치</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-eggcrap.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">에그 맛살 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">꽃맛살과 부드러운 계란 샐러드의 든든한 조합</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-tunamayo.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">에그 참치마요 샌드위치</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">고소한 참치와 부드러운 계란 샐러드의 든든한 조합</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+
+                <ul class="product-slide__list product-slide__list--dessert">
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-peng.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">리얼펑리수</a>
+                        </strong>
+                        <span class="product-card__desc">
+                          <a href="#"
+                            >대만 현지 레시피를 완벽하게 구현한 프리미엄<br />파인애플 펑리수</a
+                          >
+                        </span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cropple-cheese.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">체다치즈 크로플</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">단짠단짠 체다치즈와 즐기는 크로플</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img
+                          src="/assets/images/product-cropple-marshmello.png"
+                          alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">마시멜로우 크로플</a>
+                        </strong>
+                        <span class="product-card__desc">
+                          <a href="#">달콤한 마시멜로우와 즐기는 크로플</a>
+                        </span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cropple-icecream.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">아이스크림 크로플</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">달콤한 아이스크림과 즐기는 크로플</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-eggroll.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">에그롤</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">고소한 계란과 깊고 부드러운 버터향 가득</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cropple.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">크로플</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">겉바속쫄! 버터향 가득 크로플</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+
+                <ul class="product-slide__list product-slide__list--drink">
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-ade-melon.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">멜론 에이드</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">달콤한 멜론향이 느껴지는 청량감 있는 에이드</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-ade-strawberry.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">딸기 에이드</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">달콤한 딸기 과육이 듬뿍 들어있는 딸기에이드</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-ade-greengrape.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">청포도 에이드</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">싱그러운 청포도의 새콤달콤한 청량감</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-milkteaqueen.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">밀크티 퀸</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">깊고 진한 로얄 밀크티</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-vanillamilktea.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">바닐라 빈 밀크티</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">바닐라 빈 풍미 가득한 밀크티</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-vanillalatte.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">바닐라 빈 라떼</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">바닐라 빈 풍미 가득한 라떼</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-cafemoca.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">카페모카</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">초콜릿 풍미 가득한 카페 모카</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li class="product-slide__item">
+                    <figure class="product-card">
+                      <a class="product-card__image" href="#"
+                        ><img src="/assets/images/product-strawberryyogurt.png" alt="product image"
+                      /></a>
+                      <figcaption>
+                        <strong class="product-card__name notepad">
+                          <a href="#">딸기 프루티 요거트</a>
+                        </strong>
+                        <p class="product-card__desc">
+                          <a href="#">진한 요거트에 상큼한 딸기가 퐁당</a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="product__btn-group">
+              <button class="btn-outlined-fill" type="button">
+                <a href="#">What's New?</a>
+              </button>
+              <button class="btn-fill-outlined" type="button">
+                <a href="#">All Product</a>
+              </button>
+            </div>
+          </div>
+        </section>
+
         <section class="section">section3</section>
         <section class="section">section4</section>
+        <section class="section">section5</section>
+        <section class="section">section6</section>
       </div>
     </main>
 
