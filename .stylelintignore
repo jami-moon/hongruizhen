@@ -1,5 +1,6 @@
 # # CSS,SCSS files don't need stylelint
-_normalize.scss
-_fonts.scss
 style.css
 style.css.map
+jquery.fullPage.css
+_normalize.scss
+_fonts.scss
