@@ -19,11 +19,19 @@
 @import "./layouts/full-page";
 @import "./layouts/global-header";
 @import "./layouts/aside-menu";
-@import "./layouts/banner";
-@import "./layouts/product";
+@import "./layouts/seciton-banner";
+@import "./layouts/seciton-product";
+@import "./layouts/seciton-event";
+@import "./layouts/seciton-follow";
+@import "./layouts/seciton-news";
+@import "./layouts/seciton-video";
 
 @import "./components/banner-nav";
 @import "./components/gnb";
 @import "./components/lnb";
 @import "./components/banner-spread";
 @import "./components/product-slide";
+@import "./components/event-slide";
+@import "./components/follow-slide";
+@import "./components/news-list";
+@import "./components/video-box";

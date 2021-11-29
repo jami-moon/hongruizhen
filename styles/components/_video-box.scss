@@ -1,0 +1,130 @@
+.video-box {
+  @include flex;
+  position: relative;
+  width: 75vw;
+
+  &__cont {
+    position: relative;
+    width: 60%;
+    height: 0;
+    padding-top: 40%;
+    margin-right: 30px;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-box__cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        @include pos-center;
+        width: 120px;
+        height: 120px;
+        background-image: url(/assets/images/btn_play.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__nav {
+    @include flex(start);
+    width: 100%;
+
+    button {
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      border: 5px solid $yellow-light2;
+      border-radius: 50%;
+      transition: border 0.5s;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      &.is-active {
+        border: 5px solid $red;
+      }
+    }
+  }
+
+  &__desc {
+    height: 100%;
+    padding-top: 100px;
+    margin-left: 50px;
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 12px 35px;
+      margin-bottom: 50px;
+      font-size: 25px;
+      font-weight: 700;
+      color: $tertiary;
+      text-align: center;
+      border: 3px solid $tertiary;
+      border-radius: 3px;
+      transition: transform 1s 0.5s;
+
+      &::before {
+        position: absolute;
+        right: -120px;
+        width: 50px;
+        height: 100%;
+        content: "";
+        background-image: url(assets/images/video-arrow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        position: absolute;
+        top: -3px;
+        right: -51px;
+        width: 45px;
+        height: 100%;
+        content: "";
+        background-image: url(assets/images/video-dot.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 3px solid #3c2121;
+        border-radius: 3px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      font-size: 35px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin-bottom: 50px;
+    }
+  }
+}

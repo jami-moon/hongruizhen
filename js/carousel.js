@@ -23,6 +23,7 @@ const productNewListCarousel = tns({
   mouseDrag: true,
   controlsContainer: ".product-slide__controls",
   speed: 500,
+  loop: true,
 });
 
 const productSandwichListCarousel = tns({
@@ -36,6 +37,7 @@ const productSandwichListCarousel = tns({
   mouseDrag: true,
   controlsContainer: ".product-slide__controls",
   speed: 500,
+  loop: true,
 });
 
 const productDessertListCarousel = tns({
@@ -49,6 +51,7 @@ const productDessertListCarousel = tns({
   mouseDrag: true,
   controlsContainer: ".product-slide__controls",
   speed: 500,
+  loop: true,
 });
 
 const productDrinkListCarousel = tns({
@@ -62,6 +65,7 @@ const productDrinkListCarousel = tns({
   mouseDrag: true,
   controlsContainer: ".product-slide__controls",
   speed: 500,
+  loop: true,
 });
 
 const productSlideCarousel = tns({
@@ -76,4 +80,29 @@ const productSlideCarousel = tns({
   autoplayButtonOutput: false,
   mouseDrag: false,
   preventScrollOnTouch: true,
+});
+
+const eventCarousel = tns({
+  container: ".event-slide__list",
+  items: 3,
+  loop: true,
+  controls: true,
+  arrowKeys: true,
+  autoplay: false,
+  mouseDrag: true,
+  controlsContainer: ".event-slide__controls",
+  speed: 300,
+});
+
+const followCarousel = tns({
+  container: ".follow-slide__list",
+  items: 4,
+  gutter: 15,
+  loop: true,
+  controls: true,
+  arrowKeys: true,
+  autoplay: false,
+  mouseDrag: true,
+  controlsContainer: ".follow-slide__controls",
+  speed: 300,
 });
