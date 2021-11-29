@@ -28,6 +28,10 @@
       animation: light 1.4s ease-in-out infinite;
     }
   }
+
+  &:last-child span::before {
+    animation-delay: 0.7s;
+  }
 }
 
 @keyframes light {

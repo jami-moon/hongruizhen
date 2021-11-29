@@ -1,7 +1,6 @@
 .product-slide {
   position: relative;
   width: 100%;
-  height: 600px;
   padding: 0 250px;
   margin-bottom: 15px;
 
@@ -76,9 +75,10 @@
   &__item {
     .product-card {
       &__image {
+        position: relative;
         display: block;
         width: 100%;
-        height: 400px;
+        margin-bottom: 10px;
 
         img {
           width: 100%;
@@ -118,7 +118,7 @@
           font-size: 16px;
           font-weight: 300;
           line-height: 1.6;
-          color: $gray-dark;
+          color: $gray;
           text-align: center;
           letter-spacing: -0.8px;
         }
@@ -153,10 +153,6 @@
 
     .arrow:last-child {
       bottom: 30px;
-
-      span::before {
-        animation-delay: 0.7s;
-      }
     }
   }
 }
