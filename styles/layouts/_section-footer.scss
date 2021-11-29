@@ -1,0 +1,163 @@
+.footer {
+  height: auto !important;
+
+  .fp-tableCell {
+    height: auto !important;
+  }
+
+  &__bar {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: $cyan-light;
+
+    p {
+      position: absolute;
+      right: -180%;
+      width: 180%;
+      height: 100%;
+      overflow: hidden;
+      font-family: $font-montserrat;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 200px;
+      color: $red;
+      vertical-align: middle;
+      animation: flow 50s linear infinite;
+
+      img {
+        margin-right: 15px;
+        vertical-align: middle;
+      }
+
+      &:last-child {
+        animation-delay: 25s;
+      }
+    }
+  }
+
+  &__box-group {
+    @include flex;
+    width: 100%;
+    height: 280px;
+    padding: 0 200px;
+    background-color: $tertiary;
+
+    .footer__box {
+      width: 33.3%;
+
+      &--address {
+        .footer__gnb {
+          @include flex(start);
+
+          a {
+            display: block;
+            margin-right: 18px;
+            margin-bottom: 30px;
+            font-size: 25px;
+            font-weight: 500;
+            color: $white;
+          }
+        }
+
+        span,
+        address {
+          display: inline-block;
+          margin-bottom: 5px;
+          font-family: $font-noto;
+          font-size: 15px;
+          font-weight: 300;
+          color: $gray-transparent;
+        }
+      }
+
+      &--logo {
+        @include flex;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 1px;
+          height: 150px;
+          content: "";
+          background-color: $white-transparent;
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 1px;
+          height: 150px;
+          content: "";
+          background-color: $white-transparent;
+        }
+      }
+
+      &--menu {
+        position: relative;
+        margin-left: 50px;
+
+        .footer__link-box {
+          @include flex(start);
+
+          a {
+            display: block;
+            margin-right: 18px;
+            margin-bottom: 35px;
+            font-size: 25px;
+            font-weight: 500;
+            color: $white;
+          }
+        }
+
+        .footer__sns-list {
+          @include flex(start);
+          margin-left: 80px;
+
+          a {
+            display: block;
+            margin-right: 20px;
+          }
+        }
+
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          display: block;
+          width: 100px;
+          height: 100px;
+          content: "";
+          background: url(/assets/images/footer-satisfaction.png);
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    height: 55px;
+    font-family: $font-roboto;
+    font-size: 14px;
+    line-height: 55px;
+    color: $white-transparent2;
+    text-align: center;
+    background-color: $brown-vivid;
+  }
+}
+
+@keyframes flow {
+  0% {
+    right: -180%;
+  }
+
+  100% {
+    right: 180%;
+  }
+}
