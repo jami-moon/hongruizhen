@@ -1,0 +1,54 @@
+.video {
+  position: relative;
+  overflow: hidden;
+  background-color: $beige-vivid;
+
+  &__wrapper {
+    @include column-flex(start);
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 80px 0;
+    font-family: $font-montserrat;
+    font-size: 50px;
+    font-weight: 900;
+    color: $red;
+
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      content: "";
+      background: $red;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: -58%;
+    left: -11%;
+    display: block;
+    width: 1250px;
+    height: 1250px;
+    content: "";
+    background-color: $yellow-light2;
+    border-radius: 100%;
+    opacity: 0.6;
+  }
+
+  &.active {
+    .video-box__desc {
+      span {
+        transform: rotate(-10deg);
+      }
+    }
+  }
+}
