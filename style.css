@@ -1333,6 +1333,11 @@ address {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .footer__box-group {
+    padding: 0 50px;
+  }
+}
 
 .banner-nav {
   position: absolute;
