@@ -1,3 +1,5 @@
+"use strict";
+
 const $eventSlideItem = document.querySelectorAll(".event-slide__item");
 const $eventDesc = document.querySelectorAll(".event-slide__desc");
 

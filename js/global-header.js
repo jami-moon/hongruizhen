@@ -1,3 +1,5 @@
+"use strict";
+
 const $globalHeader = document.querySelector(".global-header");
 const $navItem = document.querySelectorAll(".nav__item");
 const $lnbBox = document.querySelector(".lnb");

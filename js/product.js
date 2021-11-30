@@ -1,3 +1,5 @@
+"use strict";
+
 const $slideNavItem = document.querySelectorAll(".product-slide__nav-item");
 
 $slideNavItem.forEach((el, idx) => {
