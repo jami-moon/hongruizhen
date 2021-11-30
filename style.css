@@ -1274,6 +1274,9 @@ address {
   font-weight: 500;
   color: #fff;
 }
+.footer__box-group .footer__box--menu .footer__link-box a:last-child {
+  margin-right: 0;
+}
 .footer__box-group .footer__box--menu .footer__sns-list {
   display: flex;
   align-items: center;
