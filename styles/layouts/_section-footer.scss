@@ -9,7 +9,8 @@
     position: relative;
     width: 100%;
     height: 200px;
-    background: $cyan-light;
+    overflow: hidden;
+    background-color: $cyan-light;
 
     p {
       position: absolute;
