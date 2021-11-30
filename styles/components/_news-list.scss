@@ -1,5 +1,5 @@
 .news-list {
-  max-width: 1200px;
+  padding: 0 250px;
 
   .news-item {
     @include flex;
@@ -79,6 +79,20 @@
           &::after {
             background-color: $red;
           }
+        }
+      }
+    }
+  }
+
+  @include responsive(xxl) {
+    padding: 0 200px;
+  }
+
+  @media screen and (max-width: 1660px) {
+    .news-item {
+      &__cont {
+        p {
+          font-size: 14px;
         }
       }
     }

@@ -155,4 +155,20 @@
       bottom: 30px;
     }
   }
+
+  @media screen and (max-width: 1660px) {
+    padding: 0 300px;
+
+    &__item {
+      .product-card {
+        &__name a {
+          font-size: 18px;
+        }
+
+        &__desc a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }

@@ -28,4 +28,10 @@
       background: $red;
     }
   }
+
+  @include responsive(xxl) {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
 }

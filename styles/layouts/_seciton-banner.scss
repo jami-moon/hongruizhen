@@ -191,7 +191,7 @@
   }
 }
 
-@include responsive(eel) {
+@include responsive(xxl) {
   .banner__item::before {
     left: -18%;
   }

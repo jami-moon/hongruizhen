@@ -780,7 +780,7 @@ address {
 .aside-menu .aside-menu__item:nth-child(6) .notepad::after {
   transition-delay: calc(0.4s + 0.2s * 6), calc(0.6s + 0.2s * 6), 0s;
 }
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1400px) {
   .aside-menu__list {
     padding: 0 30px;
   }
@@ -953,7 +953,7 @@ address {
   bottom: 45px;
 }
 
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1400px) {
   .banner__item::before {
     left: -18%;
   }
@@ -1104,6 +1104,11 @@ address {
   content: "";
   background: #f52334;
 }
+@media screen and (max-width: 1400px) {
+  .news__title {
+    margin-bottom: 40px;
+  }
+}
 
 .video {
   position: relative;
@@ -1152,6 +1157,11 @@ address {
 }
 .video.active .video-box__desc span {
   transform: rotate(-10deg);
+}
+@media screen and (max-width: 1400px) {
+  .video__title {
+    margin-bottom: 40px;
+  }
 }
 
 .footer {
@@ -1250,12 +1260,11 @@ address {
 }
 .footer__box-group .footer__box--menu {
   position: relative;
-  margin-left: 50px;
 }
 .footer__box-group .footer__box--menu .footer__link-box {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .footer__box-group .footer__box--menu .footer__link-box a {
   display: block;
@@ -1268,7 +1277,7 @@ address {
 .footer__box-group .footer__box--menu .footer__sns-list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-left: 80px;
 }
 .footer__box-group .footer__box--menu .footer__sns-list a {
@@ -1277,11 +1286,11 @@ address {
 }
 .footer__box-group .footer__box--menu::after {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -40px;
+  bottom: 20px;
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   content: "";
   background: url(/assets/images/footer-satisfaction.png);
   border-radius: 20px;
@@ -1296,7 +1305,6 @@ address {
   text-align: center;
   background-color: #2d1817;
 }
-
 @keyframes flow {
   0% {
     right: -180%;
@@ -1305,6 +1313,22 @@ address {
     right: 180%;
   }
 }
+@media screen and (max-width: 1660px) {
+  .footer__box-group {
+    padding: 0 150px;
+  }
+  .footer__bar p {
+    font-size: 80px;
+  }
+  .footer .footer__box--menu::after {
+    display: none;
+  }
+  .footer .footer__box-group .footer__box--address .footer__gnb a,
+.footer .footer__box-group .footer__box--menu .footer__link-box a {
+    font-size: 20px;
+  }
+}
+
 .banner-nav {
   position: absolute;
   top: 35%;
@@ -1350,7 +1374,7 @@ address {
 .banner-nav__item--2 {
   left: 12px;
 }
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1400px) {
   .banner-nav {
     right: 8%;
   }
@@ -1423,14 +1447,9 @@ address {
   padding: 0 75px;
   margin-right: 30px;
 }
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1400px) {
   .gnb__membership .gnb__franchise {
     padding: 0 30px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .gnb .nav {
-    display: none;
   }
 }
 
@@ -1763,6 +1782,17 @@ address {
 .product-slide__controls .arrow:last-child {
   bottom: 30px;
 }
+@media screen and (max-width: 1660px) {
+  .product-slide {
+    padding: 0 300px;
+  }
+  .product-slide__item .product-card__name a {
+    font-size: 18px;
+  }
+  .product-slide__item .product-card__desc a {
+    font-size: 14px;
+  }
+}
 
 .event-slide {
   position: relative;
@@ -1973,7 +2003,7 @@ address {
 }
 
 .news-list {
-  max-width: 1200px;
+  padding: 0 250px;
 }
 .news-list .news-item {
   display: flex;
@@ -2046,6 +2076,16 @@ address {
 }
 .news-list .news-item:hover .news-item__cont a::after {
   background-color: #f52334;
+}
+@media screen and (max-width: 1400px) {
+  .news-list {
+    padding: 0 200px;
+  }
+}
+@media screen and (max-width: 1660px) {
+  .news-list .news-item__cont p {
+    font-size: 14px;
+  }
 }
 
 .video-box {
@@ -2168,6 +2208,16 @@ address {
 }
 .video-box__desc p {
   margin-bottom: 50px;
+}
+@media screen and (max-height: 800px) {
+  .video-box__desc {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 1660px) {
+  .video-box__desc h3 {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

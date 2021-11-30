@@ -101,10 +101,9 @@
 
       &--menu {
         position: relative;
-        margin-left: 50px;
 
         .footer__link-box {
-          @include flex(start);
+          @include flex;
 
           a {
             display: block;
@@ -117,7 +116,7 @@
         }
 
         .footer__sns-list {
-          @include flex(start);
+          @include flex;
           margin-left: 80px;
 
           a {
@@ -128,11 +127,11 @@
 
         &::after {
           position: absolute;
-          right: 0;
-          bottom: 0;
+          right: -40px;
+          bottom: 20px;
           display: block;
-          width: 100px;
-          height: 100px;
+          width: 90px;
+          height: 90px;
           content: "";
           background: url(/assets/images/footer-satisfaction.png);
           border-radius: 20px;
@@ -151,14 +150,35 @@
     text-align: center;
     background-color: $brown-vivid;
   }
-}
 
-@keyframes flow {
-  0% {
-    right: -180%;
+  @keyframes flow {
+    0% {
+      right: -180%;
+    }
+
+    100% {
+      right: 180%;
+    }
   }
 
-  100% {
-    right: 180%;
+  @media screen and (max-width: 1660px) {
+    &__box-group {
+      padding: 0 150px;
+    }
+
+    &__bar {
+      p {
+        font-size: 80px;
+      }
+    }
+
+    .footer__box--menu::after {
+      display: none;
+    }
+
+    .footer__box-group .footer__box--address .footer__gnb a,
+    .footer__box-group .footer__box--menu .footer__link-box a {
+      font-size: 20px;
+    }
   }
 }

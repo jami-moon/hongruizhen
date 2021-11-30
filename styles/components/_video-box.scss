@@ -127,4 +127,18 @@
       margin-bottom: 50px;
     }
   }
+
+  @include responsive(height) {
+    &__desc {
+      padding-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1660px) {
+    &__desc {
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
 }

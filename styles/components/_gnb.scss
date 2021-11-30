@@ -78,13 +78,13 @@
     }
   }
 
-  @include responsive(eel) {
+  @include responsive(xxl) {
     &__membership .gnb__franchise {
       padding: 0 30px;
     }
   }
 
-  @include responsive(el) {
+  @include responsive(xl) {
     .nav {
       display: none;
     }

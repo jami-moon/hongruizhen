@@ -126,7 +126,7 @@
     }
   }
 
-  @include responsive(eel) {
+  @include responsive(xxl) {
     &__list {
       padding: 0 30px;
     }
