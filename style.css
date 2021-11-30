@@ -896,23 +896,80 @@ address {
 .banner .arrow:last-child {
   bottom: 3%;
 }
+
+.quick-link {
+  position: fixed;
+  right: 3%;
+  bottom: 8%;
+  z-index: 900;
+  cursor: pointer;
+}
+.quick-link__item {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 20px;
+  background-color: #f52334;
+  border-radius: 50%;
+}
+.quick-link__item a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s 0.1s, bottom 0.5s 0.1s;
+}
+.quick-link__item::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  display: block;
+  width: 20px;
+  height: 26px;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: bottom 0.5s;
+}
+.quick-link__item:nth-child(1)::before {
+  background-image: url(/assets/images/quick-find.png);
+}
+.quick-link__item:nth-child(2)::before {
+  background-image: url(/assets/images/quick_shop.png);
+}
+.quick-link__item:hover a {
+  bottom: 0px;
+  opacity: 1;
+}
+.quick-link__item:hover::before {
+  bottom: 45px;
+}
+
 @media screen and (max-width: 1660px) {
-  .banner .banner__item::before {
+  .banner__item::before {
     left: -18%;
   }
-  .banner .banner-content__info {
+
+  .banner-content__info {
     max-width: 350px;
     text-align: left;
   }
-  .banner .banner-content__info h3 {
+  .banner-content__info h3 {
     font-size: 45px;
   }
-  .banner .banner-content__image {
+  .banner-content__image {
     width: 40%;
     padding-top: 40%;
   }
 }
-
 .product {
   position: relative;
   background-color: #fff5d9;
@@ -1107,7 +1164,8 @@ address {
   position: relative;
   width: 100%;
   height: 200px;
-  background: #9ad6cb;
+  overflow: hidden;
+  background-color: #9ad6cb;
 }
 .footer__bar p {
   position: absolute;
