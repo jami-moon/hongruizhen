@@ -105,13 +105,16 @@
         .footer__link-box {
           @include flex;
 
-          a {
-            display: block;
+          li {
             margin-right: 18px;
-            margin-bottom: 35px;
-            font-size: 25px;
-            font-weight: 500;
-            color: $white;
+
+            a {
+              display: block;
+              margin-bottom: 35px;
+              font-size: 25px;
+              font-weight: 500;
+              color: $white;
+            }
 
             &:last-child {
               margin-right: 0;
