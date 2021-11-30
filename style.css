@@ -1266,15 +1266,17 @@ address {
   align-items: center;
   justify-content: center;
 }
-.footer__box-group .footer__box--menu .footer__link-box a {
-  display: block;
+.footer__box-group .footer__box--menu .footer__link-box li {
   margin-right: 18px;
+}
+.footer__box-group .footer__box--menu .footer__link-box li a {
+  display: block;
   margin-bottom: 35px;
   font-size: 25px;
   font-weight: 500;
   color: #fff;
 }
-.footer__box-group .footer__box--menu .footer__link-box a:last-child {
+.footer__box-group .footer__box--menu .footer__link-box li:last-child {
   margin-right: 0;
 }
 .footer__box-group .footer__box--menu .footer__sns-list {
