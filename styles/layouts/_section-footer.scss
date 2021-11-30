@@ -188,4 +188,10 @@
       font-size: 20px;
     }
   }
+
+  @include responsive(xxl) {
+    &__box-group {
+      padding: 0 50px;
+    }
+  }
 }
