@@ -1,13 +1,10 @@
 %btn-base {
   @include inline-flex;
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: 700;
   border: 3px solid $red;
   border-radius: 36px;
-
-  a {
-    font-family: $font-montserrat;
-    font-size: 16px;
-    font-weight: 700;
-  }
 
   &:disabled {
     cursor: not-allowed;
@@ -21,29 +18,23 @@
   transition: background-color 300ms ease-in-out;
 
   &:not(:disabled):hover {
+    color: $white;
     background-color: $red;
-
-    a {
-      color: $white;
-    }
   }
 }
 
 .btn-outlined-fill {
   @extend %btn-base;
   position: relative;
+  z-index: 1;
   overflow: hidden;
   color: $red;
-
-  a {
-    z-index: 1;
-  }
 
   &::after {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;
@@ -68,18 +59,15 @@
 .btn-fill-outlined {
   @extend %btn-base;
   position: relative;
+  z-index: 1;
   overflow: hidden;
   color: $white;
-
-  a {
-    z-index: 1;
-  }
 
   &::after {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;

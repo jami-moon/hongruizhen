@@ -9,16 +9,3 @@
   white-space: nowrap !important;
   border: 0 !important;
 }
-
-section {
-  div:first-child {
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-
-  &.active {
-    div:first-child {
-      opacity: 1;
-    }
-  }
-}

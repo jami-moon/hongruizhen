@@ -1,24 +1,24 @@
 @font-face {
   font-family: "S-CoreDream";
-  src: url("/assets/fonts/SCDream3.otf");
+  src: url("../../assets/fonts/SCDream3.otf");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "S-CoreDream";
-  src: url("/assets/fonts/SCDream4.otf");
+  src: url("../../assets/fonts/SCDream4.otf");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "S-CoreDream";
-  src: url("/assets/fonts/SCDream5.otf");
+  src: url("../../assets/fonts/SCDream5.otf");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "S-CoreDream";
-  src: url("/assets/fonts/SCDream7.otf");
+  src: url("../../assets/fonts/SCDream7.otf");
   font-style: normal;
   font-weight: 700;
 }
@@ -32,14 +32,6 @@
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
-}
-
-section div:first-child {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-section.active div:first-child {
-  opacity: 1;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -446,13 +438,11 @@ address {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid #f52334;
-  border-radius: 36px;
-}
-.btn-fill-outlined a, .btn-outlined-fill a, .btn-outlined a {
   font-family: "Montserrat", "S-CoreDream", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  border: 3px solid #f52334;
+  border-radius: 36px;
 }
 .btn-fill-outlined:disabled, .btn-outlined-fill:disabled, .btn-outlined:disabled {
   cursor: not-allowed;
@@ -464,25 +454,21 @@ address {
   transition: background-color 300ms ease-in-out;
 }
 .btn-outlined:not(:disabled):hover {
-  background-color: #f52334;
-}
-.btn-outlined:not(:disabled):hover a {
   color: #fff;
+  background-color: #f52334;
 }
 
 .btn-outlined-fill {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   color: #f52334;
-}
-.btn-outlined-fill a {
-  z-index: 1;
 }
 .btn-outlined-fill::after {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   display: block;
   width: 100%;
   height: 100%;
@@ -503,17 +489,15 @@ address {
 
 .btn-fill-outlined {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   color: #fff;
-}
-.btn-fill-outlined a {
-  z-index: 1;
 }
 .btn-fill-outlined::after {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   display: block;
   width: 100%;
   height: 100%;
@@ -1004,10 +988,8 @@ address {
   background: #f52334;
 }
 .product__btn-group button {
-  margin-right: 10px;
-}
-.product__btn-group button a {
   padding: 18px 75px;
+  margin-right: 10px;
 }
 
 .event {
@@ -1433,25 +1415,19 @@ address {
   align-items: center;
   justify-content: center;
 }
-.gnb__membership .gnb__login a,
-.gnb__membership .gnb__join a {
+.gnb__membership .gnb__login,
+.gnb__membership .gnb__join {
+  padding: 0 15px;
   font-family: "Montserrat", "S-CoreDream", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #401e20;
 }
 .gnb__membership .gnb__login {
-  position: relative;
-}
-.gnb__membership .gnb__login::after {
-  margin: 0 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #401e20;
-  content: "|";
+  border-right: 3px solid #000;
 }
 .gnb__membership .gnb__join {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .gnb__membership .gnb__franchise {
   padding: 0 75px;
@@ -1920,7 +1896,7 @@ address {
   height: 100%;
   object-fit: contain;
 }
-.follow-slide__item figcaption {
+.follow-slide__item span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1947,19 +1923,19 @@ address {
 .follow-slide__item:hover figure::after {
   height: 100%;
 }
-.follow-slide__item:hover figcaption {
+.follow-slide__item:hover span {
   opacity: 1;
 }
-.follow-slide__item:hover figcaption::before {
+.follow-slide__item:hover span::before {
   width: 100%;
 }
-.follow-slide__item:hover figcaption::after {
+.follow-slide__item:hover span::after {
   height: 100%;
 }
 .follow-slide__item figure::before,
 .follow-slide__item figure::after,
-.follow-slide__item figcaption::before,
-.follow-slide__item figcaption::after {
+.follow-slide__item span::before,
+.follow-slide__item span::after {
   position: absolute;
   z-index: 1;
   content: "";
@@ -1978,13 +1954,13 @@ address {
   width: 13px;
   height: 0;
 }
-.follow-slide__item figcaption::before {
+.follow-slide__item span::before {
   bottom: 0;
   left: 0;
   width: 0;
   height: 13px;
 }
-.follow-slide__item figcaption::after {
+.follow-slide__item span::after {
   bottom: 0;
   left: 0;
   width: 13px;
@@ -2043,7 +2019,7 @@ address {
   margin-bottom: 15px;
   font-size: 20px;
 }
-.news-list .news-item__cont strong div {
+.news-list .news-item__cont strong span {
   display: flex;
   align-items: center;
   justify-content: center;
