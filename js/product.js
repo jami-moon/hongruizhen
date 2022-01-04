@@ -10,9 +10,6 @@ $slideNavItem.forEach((el, idx) => {
 
 function handleSlideNavClick(e, idx) {
   let navTarget = $slideNavItem[idx];
-  // let targetSiblings = Array.from(navTarget.parentElement.children).filter(
-  //   (el) => el != navTarget
-  // );
 
   $slideNavItem.forEach((el) => {
     el.classList.remove(`is-active`);
@@ -25,12 +22,18 @@ const $productImage = document.querySelectorAll(".product-card__image img");
 
 $productImage.forEach((el) => {
   el.addEventListener("mouseenter", (e) => {
-    let targetSrcWithoutExtenstion = e.target.src.replace(/(.png|.jpg|.jpeg|.gif)$/, "");
+    let targetSrcWithoutExtenstion = e.target.src.replace(
+      /(.png|.jpg|.jpeg|.gif)$/,
+      ""
+    );
     e.target.src = `${targetSrcWithoutExtenstion}2.png`;
   });
 
   el.addEventListener("mouseleave", (e) => {
-    let targetSrcWithoutExtenstion = e.target.src.replace(/(.png|.jpg|.jpeg|.gif)$/, "");
+    let targetSrcWithoutExtenstion = e.target.src.replace(
+      /(.png|.jpg|.jpeg|.gif)$/,
+      ""
+    );
     e.target.src = `${targetSrcWithoutExtenstion.slice(0, -1)}.png`;
   });
 });

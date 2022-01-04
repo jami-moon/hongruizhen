@@ -1,4 +1,4 @@
-"use-strict";
+"use strict";
 
 // 유튜브 API 사용
 

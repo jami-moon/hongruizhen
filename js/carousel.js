@@ -1,3 +1,5 @@
+"use strict";
+
 const mainBannerCarousel = tns({
   mode: "gallery",
   container: ".banner .banner__list",
